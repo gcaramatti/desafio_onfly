@@ -1,0 +1,53 @@
+/* app global css */
+:root {
+  --primary: #080e1a;
+  --secondary: #83d9fc;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+#q-app {
+  height: 100vh;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.q-inner-loading {
+  z-index: 100;
+}
+
+.q-drawer,
+.q-header {
+  background-color: var(--secondary) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+  color: var(--white);
+  font-size: 20px;
+  margin: 0;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.custom-invisible-button {
+  border: 0 !important;
+  background-color: transparent !important;
+}
