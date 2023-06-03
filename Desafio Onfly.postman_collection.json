@@ -72,7 +72,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "21|5hhYClJCPXWwObKoZnrDEoKlj9cm1mpDU75wnJwj",
+							"value": "5|nocl8sQK7lVav2Q71tz2YKnnTqvJsuQezHXzTE1M",
 							"type": "string"
 						}
 					]
@@ -100,6 +100,16 @@
 		{
 			"name": "logout",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "21|5hhYClJCPXWwObKoZnrDEoKlj9cm1mpDU75wnJwj",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -174,7 +184,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "21|5hhYClJCPXWwObKoZnrDEoKlj9cm1mpDU75wnJwj",
+							"value": "4|dL4x4u6ozB7Ic1aeVa50wY6ORxdCWVAK3S2yRALf",
 							"type": "string"
 						}
 					]
@@ -282,7 +292,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "21|5hhYClJCPXWwObKoZnrDEoKlj9cm1mpDU75wnJwj",
+							"value": "4|dL4x4u6ozB7Ic1aeVa50wY6ORxdCWVAK3S2yRALf",
 							"type": "string"
 						}
 					]
