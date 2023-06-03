@@ -103,7 +103,7 @@ class UserController extends Controller
             return Response(['token' => $success], 200);
         }
 
-        return Response(['message' => 'email or password wrong'], 401);
+        return Response(['message' => 'E-mail ou senha incorretos'], 401);
     }
     
     public function logout(): Response
@@ -111,6 +111,6 @@ class UserController extends Controller
         $user = Auth::user();
         $user->currentAccessToken()->delete();
         
-        return Response(['data' => 'User Logout successfully.'], 200);
+        return Response(['data' => 'Usuario deslogado'], 200);
     }
 }
