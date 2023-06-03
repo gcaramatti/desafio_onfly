@@ -1,4 +1,4 @@
-# Desafio Grupo SX
+# Desafio Onfly
 
 Projeto separado em front e back-end
 
