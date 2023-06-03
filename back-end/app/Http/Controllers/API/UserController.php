@@ -54,7 +54,7 @@ class UserController extends Controller
 
     public function update(Request $request, $id) 
     {
-        $user = User::findOrFail($id);
+        $user = User::find($id);
 
         if($user) {
             $user->name = $request->name;
@@ -67,7 +67,7 @@ class UserController extends Controller
             return Response(['data' => 'Usuário atualizado com sucesso'], 200);
         }
         
-        return Response(['data' => 'Erro ao atualizar despesa'], 500);
+        return Response(['data' => 'Erro ao atualizar usuario ou usuario não encontrado'], 500);
     }
 
     /**
@@ -75,13 +75,15 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        if(isset($id)) {
+        $user = User::find($id);
+
+        if($user) {
             User::destroy($id);
 
             return Response(['data' => 'Usuario apagado com sucesso'], 200);
         }
         
-        return Response(['data' => 'Não autorizado'], 401);
+        return Response(['data' => 'Usuario nao encontrado'], 500);
     }
 
     public function oauthUser() {

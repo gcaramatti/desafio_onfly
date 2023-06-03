@@ -44,7 +44,7 @@ class ExpenseController extends Controller
      */
     public function show(string $id)
     {
-        $expense = Expense::findOrFail($id);
+        $expense = Expense::find($id);
     
         if($expense) {
             return Response(['data' => $expense], 200);
@@ -58,7 +58,7 @@ class ExpenseController extends Controller
      */
     public function update(CreateExpensesRequest $request, string $id)
     {
-        $expense = Expense::findOrFail($id);
+        $expense = Expense::find($id);
         $this->authorize('update', $expense);
 
         if($expense) {
@@ -80,7 +80,7 @@ class ExpenseController extends Controller
      */
     public function destroy(string $id)
     {
-        $expense = Expense::findOrFail($id);
+        $expense = Expense::find($id);
 
         if($expense) {
             $this->authorize('delete', $expense);
