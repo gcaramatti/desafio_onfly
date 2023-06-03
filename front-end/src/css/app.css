@@ -3,6 +3,7 @@
   --primary: #080e1a;
   --secondary: #83d9fc;
   --white: #ffffff;
+  --third: #1769ba;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--third);
 }
 
 .q-inner-loading {

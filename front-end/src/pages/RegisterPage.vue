@@ -1,7 +1,7 @@
 <template>
   <div class="full-height row justify-center items-center">
     <div class="form-container">
-      <RegisterForm></RegisterForm>
+      <RegisterForm class="q-mb-md"></RegisterForm>
 
       <router-link to="/login">Login</router-link>
     </div>

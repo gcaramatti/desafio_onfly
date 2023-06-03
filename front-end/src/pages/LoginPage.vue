@@ -2,7 +2,7 @@
   <LoaderComponent :is-loading="isLoading"></LoaderComponent>
   <div class="full-height row justify-center items-center">
     <div class="form-container">
-      <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
+      <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md q-mb-md">
         <q-input
           filled
           autocomplete="off"

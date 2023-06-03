@@ -1,7 +1,7 @@
 <template>
   <LoaderComponent :is-loading="isLoading"></LoaderComponent>
 
-  <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
+  <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md q-mb-md">
     <q-input
       filled
       v-model="form.name"
