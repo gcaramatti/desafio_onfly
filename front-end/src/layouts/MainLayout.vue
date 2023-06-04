@@ -42,9 +42,14 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useAuth } from 'src/stores/auth';
 import EssentialLink, {
   EssentialLinkProps,
 } from 'components/EssentialLink.vue';
+import { useRouter } from 'vue-router';
+
+const { logout } = useAuth();
+const router = useRouter();
 
 const essentialLinks: EssentialLinkProps[] = [
   {
@@ -63,7 +68,7 @@ const essentialLinks: EssentialLinkProps[] = [
     title: 'Logout',
     caption: 'Desconectar',
     icon: 'login',
-    link: '/login',
+    onclick: () => logoutButton(),
   },
 ];
 
@@ -71,5 +76,10 @@ const leftDrawerOpen = ref(false);
 
 function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value;
+}
+
+function logoutButton() {
+  logout();
+  router.push('/login');
 }
 </script>

@@ -73,7 +73,9 @@ import LoaderComponent from 'src/components/Loader/LoaderComponent.vue';
 import UserService from 'src/services/user/user';
 import { useAuth } from 'src/stores/auth';
 import { Notify } from 'quasar';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const { userData, logout } = useAuth();
 const route = useRoute();
 
@@ -113,7 +115,7 @@ async function onSubmit() {
     await UserService.updateUser(form.value);
     if (form.value.id === userData.id) {
       await logout();
-      this.$router.push('/login');
+      router.push('/login');
     }
 
     Notify.create({
