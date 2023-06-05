@@ -35,30 +35,6 @@ class ExpenseControllerTest extends TestCase
     }
 
     /**
-     * Test index method for guest user (not logged in).
-     */
-    // public function testIndexGuestUser()
-    // {
-    //     Expense::factory()->count(3)->create();
-
-    //     $response = $this->get('/api/expenses');
-
-    //     $response->assertStatus(200)
-    //         ->assertJsonStructure([
-    //             'data' => [
-    //                 '*' => [
-    //                     'id',
-    //                     'description',
-    //                     'expenses_date',
-    //                     'price',
-    //                     'user_id',
-    //                     // Add other expected fields
-    //                 ],
-    //             ],
-    //         ]);
-    // }
-
-    /**
      * Test store method for logged-in user.
      */
     public function testStoreLoggedUser()

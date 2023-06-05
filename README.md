@@ -42,3 +42,12 @@ Front-end: <br />
 - No formulário de registro inicial, você pode selecionar se o seu usuário é admin ou não (fiz um plus para o desafio login + validação se é admin). <br />
 - Usuários administradores podem apagar qualquer tipo de usuário. (Tomei o cuidado de se você apagar ou alterar seu próprio usuário, você automaticamente será deslogado)
 - Usuários comuns podem visualizar e editar qualquer usuário (Para mostrar a funcionalidade em prática, deixei de propósito a edição aberta para qualquer usuário).
+
+# Testes unitários
+
+- Para rodar os testes unitários, basta rodar o comando "php artisan test", fiz testes unitários apenas do CRUD de despesas, verificando as operações quando temos usuário autenticado e quando não temos.<br />
+- LEMBRE-SE DE criar um banco de dados para os testes unitários e adicionar na variável DB_TEST_DATABASE .env.
+
+# Observação:
+
+- Ao cadastrarmos uma nova despesa pela API, automaticamente um e-mail é enviado, mas como estamos em um ambiente de desenvolvimento, o e-mail não será enviado para o endereço identificado de fato. Eu utilizei a plataforma "mailtrap.io", portanto deve-se criar uma conta no mailtrap, e adicionar as configurações no .env (ler documentação da API).
